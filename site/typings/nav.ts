@@ -1,3 +1,4 @@
+/* eslint-disable perfectionist/sort-enums */
 /*
  * Tencent is pleased to support the open source community by making
  * 蓝鲸智云PaaS平台社区版 (BlueKing PaaS Community Edition) available.
@@ -26,13 +27,13 @@
 
 // nav group setting
 export enum NavGroupMeta {
+  Start = '开始',
   Base = '基础',
-  Business = '业务组件',
-  Data = '数据',
-  Feedback = '反馈',
-  Form = '表单',
   Layout = '布局',
   Nav = '导航',
-  Start = '开始',
+  Form = '表单',
+  Data = '数据',
+  Feedback = '反馈',
+  Business = '业务组件',
   // Others = '其他'
 }
