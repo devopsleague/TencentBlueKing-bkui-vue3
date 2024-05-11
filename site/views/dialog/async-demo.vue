@@ -1,21 +1,17 @@
 <template>
   <div>
-    <bk-button
-      @click="() => exampleSetting.isShow = true"
-    >
-      异步关闭
-    </bk-button>
+    <bk-button @click="() => (exampleSetting.isShow = true)"> 异步关闭 </bk-button>
     <bk-dialog
-      :is-show="exampleSetting.isShow"
-      :title="'文本标题'"
-      :theme="'primary'"
       :confirm-text="exampleSetting.confirmText"
       :is-loading="exampleSetting.loading"
-      @closed="() => exampleSetting.isShow = false"
+      :is-show="exampleSetting.isShow"
+      :theme="'primary'"
+      :title="'文本标题'"
+      @closed="() => (exampleSetting.isShow = false)"
       @confirm="handleConfirm"
       @value-change="valueChange"
     >
-      <div> 点击确定后 {{ exampleSetting.countdown }} 秒关闭</div>
+      <div>点击确定后 {{ exampleSetting.countdown }} 秒关闭</div>
     </bk-dialog>
   </div>
 </template>
@@ -45,7 +41,7 @@
     }, 1000);
   };
 
-  const valueChange = (val) => {
+  const valueChange = val => {
     if (!val) {
       clearInterval(exampleSetting.value.timer);
       exampleSetting.value.loading = false;
@@ -53,4 +49,3 @@
     }
   };
 </script>
-

@@ -8,26 +8,26 @@
     </bk-button>
 
     <bk-button
-      theme="danger"
+      style="margin-left: 15px"
       class="ml10"
-      style="margin-left: 15px;"
+      theme="danger"
       @click="handleDefault2"
     >
       错误
     </bk-button>
 
     <bk-button
-      theme="warning"
+      style="margin-left: 15px"
       class="ml10"
-      style="margin-left: 15px;"
+      theme="warning"
       @click="handleDefault3"
     >
       警告
     </bk-button>
 
     <bk-button
+      style="margin-left: 15px"
       class="ml10"
-      style="margin-left: 15px;"
       @click="handleDefault4"
     >
       loading
@@ -43,13 +43,17 @@
     InfoBox({
       infoType: 'success',
       title: '添加用户成功',
-      subTitle: h('a', {
-        style: {
-          color: '#3a84ff',
-          textDecoration: 'none',
-          cursor: 'pointer',
+      subTitle: h(
+        'a',
+        {
+          style: {
+            color: '#3a84ff',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          },
         },
-      }, '继续添加'),
+        '继续添加',
+      ),
       onConfirm() {},
     });
   };

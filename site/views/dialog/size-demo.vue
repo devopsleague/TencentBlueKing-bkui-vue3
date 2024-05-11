@@ -2,18 +2,18 @@
   <div>
     <bk-button
       class="mr10"
-      @click="() => exampleSetting1.dialog1.isShow = true"
+      @click="() => (exampleSetting1.dialog1.isShow = true)"
     >
       normal
     </bk-button>
     <bk-dialog
       class="asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd"
       :is-show="exampleSetting1.dialog1.isShow"
-      :title="'这是标题'"
-      :theme="'primary'"
       :size="'normal'"
-      @closed="() => exampleSetting1.dialog1.isShow = false"
-      @confirm="() => exampleSetting1.dialog1.isShow = false"
+      :theme="'primary'"
+      :title="'这是标题'"
+      @closed="() => (exampleSetting1.dialog1.isShow = false)"
+      @confirm="() => (exampleSetting1.dialog1.isShow = false)"
     >
       <div>normal</div>
     </bk-dialog>
@@ -115,7 +115,7 @@
 </script>
 
 <style lang="postcss">
-.mr10 {
-  margin-right: 10px;
-}
+  .mr10 {
+    margin-right: 10px;
+  }
 </style>

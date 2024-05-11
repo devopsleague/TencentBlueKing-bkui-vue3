@@ -2,71 +2,71 @@
   <div>
     <bk-button
       class="mr10"
-      @click="() => exampleSetting.dialog1.isShow = true"
+      @click="() => (exampleSetting.dialog1.isShow = true)"
     >
       展示型
     </bk-button>
     <bk-dialog
-      :is-show="exampleSetting.dialog1.isShow"
-      :title="'标题描述'"
-      :theme="'primary'"
       :dialog-type="'show'"
-      @closed="() => exampleSetting.dialog1.isShow = false"
-      @confirm="() => exampleSetting.dialog1.isShow = false"
+      :is-show="exampleSetting.dialog1.isShow"
+      :theme="'primary'"
+      :title="'标题描述'"
+      @closed="() => (exampleSetting.dialog1.isShow = false)"
+      @confirm="() => (exampleSetting.dialog1.isShow = false)"
     >
       <div>展示型对话框</div>
     </bk-dialog>
 
     <bk-button
       class="mr10"
-      @click="() => exampleSetting.dialog2.isShow = true"
+      @click="() => (exampleSetting.dialog2.isShow = true)"
     >
       操作型
     </bk-button>
     <bk-dialog
-      :is-show="exampleSetting.dialog2.isShow"
-      :title="'标题描述'"
-      :theme="'primary'"
       :dialog-type="'operation'"
-      @closed="() => exampleSetting.dialog2.isShow = false"
-      @confirm="() => exampleSetting.dialog2.isShow = false"
+      :is-show="exampleSetting.dialog2.isShow"
+      :theme="'primary'"
+      :title="'标题描述'"
+      @closed="() => (exampleSetting.dialog2.isShow = false)"
+      @confirm="() => (exampleSetting.dialog2.isShow = false)"
     >
       <div>操作型对话框</div>
     </bk-dialog>
 
     <bk-button
       class="mr10"
-      @click="() => exampleSetting.dialog3.isShow = true"
+      @click="() => (exampleSetting.dialog3.isShow = true)"
     >
       确认型
     </bk-button>
     <bk-dialog
-      :is-show="exampleSetting.dialog3.isShow"
-      :title="'标题描述'"
-      :theme="'primary'"
       :dialog-type="'confirm'"
-      @closed="() => exampleSetting.dialog3.isShow = false"
-      @confirm="() => exampleSetting.dialog3.isShow = false"
+      :is-show="exampleSetting.dialog3.isShow"
+      :theme="'primary'"
+      :title="'标题描述'"
+      @closed="() => (exampleSetting.dialog3.isShow = false)"
+      @confirm="() => (exampleSetting.dialog3.isShow = false)"
     >
       <div>确认型对话框</div>
     </bk-dialog>
 
     <bk-button
       class="mr10"
-      @click="() => exampleSetting.dialog4.isShow = true"
+      @click="() => (exampleSetting.dialog4.isShow = true)"
     >
       流程型
     </bk-button>
     <bk-dialog
-      :is-show="exampleSetting.dialog4.isShow"
-      :title="'标题描述'"
-      :theme="'primary'"
-      :size="'medium'"
-      :dialog-type="'process'"
       :current="currentId"
+      :dialog-type="'process'"
+      :is-show="exampleSetting.dialog4.isShow"
+      :size="'medium'"
+      :theme="'primary'"
+      :title="'标题描述'"
       :total-step="objectSteps.length"
-      @closed="() => exampleSetting.dialog4.isShow = false"
-      @confirm="() => exampleSetting.dialog4.isShow = false"
+      @closed="() => (exampleSetting.dialog4.isShow = false)"
+      @confirm="() => (exampleSetting.dialog4.isShow = false)"
       @next="handleNext"
       @prev="handlePrev"
     >

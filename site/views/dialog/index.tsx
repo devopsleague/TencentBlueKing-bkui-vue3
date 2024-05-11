@@ -30,7 +30,6 @@ import DemoBox from '../../components/demo-box';
 import DemoTitle from '../../components/demo-title';
 import PropsBox from '../../components/props-box';
 import { IPropsTableItem } from '../../typings';
-
 import AsyncDemo from './async-demo.vue';
 import BaseDemo from './base-demo.vue';
 import ConfigDemo from './config-demo.vue';
@@ -285,97 +284,97 @@ export default defineComponent({
     return (
       <div>
         <DemoTitle
-          name='Dialog 对话框'
           desc='对话框'
           designLink='https://bkdesign.bk.tencent.com/design/29'
+          name='Dialog 对话框'
         />
 
         <DemoBox
-          title='基本用法'
-          subtitle=''
-          desc='默认配置的对话框。通过 theme 属性配置弹框中不同的主题确认按钮；通过 quickClose 配置是否允许点击遮罩关闭弹框，默认为 true。通过 escClose 配置是否启用 esc 按键关闭弹框，默认为 true。'
           componentName='dialog'
           demoName='base-demo'
+          desc='默认配置的对话框。通过 theme 属性配置弹框中不同的主题确认按钮；通过 quickClose 配置是否允许点击遮罩关闭弹框，默认为 true。通过 escClose 配置是否启用 esc 按键关闭弹框，默认为 true。'
+          subtitle=''
+          title='基本用法'
         >
           <BaseDemo></BaseDemo>
         </DemoBox>
 
         <DemoBox
-          title='自定义size'
-          subtitle=''
-          desc='对话框分为4个尺寸。通过 size 属性 normal, small, medium, large 进行配置，也可通过 width, height 自定义宽高。'
           componentName='dialog'
           demoName='size-demo'
+          desc='对话框分为4个尺寸。通过 size 属性 normal, small, medium, large 进行配置，也可通过 width, height 自定义宽高。'
+          subtitle=''
+          title='自定义size'
         >
           <SizeDemo></SizeDemo>
         </DemoBox>
 
         <DemoBox
-          title='自定义内容以及弹框配置'
-          subtitle=''
-          desc='通过设置 draggable 属性来设置是否允许弹框拖拽。通过 closeIcon 属性设置是否显示右上角的关闭 icon。'
           componentName='dialog'
           demoName='config-demo'
+          desc='通过设置 draggable 属性来设置是否允许弹框拖拽。通过 closeIcon 属性设置是否显示右上角的关闭 icon。'
+          subtitle=''
+          title='自定义内容以及弹框配置'
         >
           <ConfigDemo></ConfigDemo>
         </DemoBox>
 
         <DemoBox
-          title='异步'
-          subtitle=''
-          desc='通过 loading 属性配置异步关闭效果，开启则需手动设置value来关闭对话框。'
           componentName='dialog'
           demoName='async-demo'
+          desc='通过 loading 属性配置异步关闭效果，开启则需手动设置value来关闭对话框。'
+          subtitle=''
+          title='异步'
         >
           <AsyncDemo></AsyncDemo>
         </DemoBox>
 
         <DemoBox
-          title='全屏弹框'
-          subtitle=''
-          desc='通过 fullscreen 属性配置全屏弹框，当设置为全屏弹框时，draggable 配置不生效即弹框不能拖动。'
           componentName='dialog'
           demoName='fullscreen-demo'
+          desc='通过 fullscreen 属性配置全屏弹框，当设置为全屏弹框时，draggable 配置不生效即弹框不能拖动。'
+          subtitle=''
+          title='全屏弹框'
         >
           <FullscreenDemo></FullscreenDemo>
         </DemoBox>
 
         <DemoBox
-          title='对话框类型'
-          subtitle=''
-          desc='对话框分为4种类型。通过 dialogType 属性 show，operation，confirm，process 进行配置，默认 operation 类型。'
           componentName='dialog'
           demoName='type-demo'
+          desc='对话框分为4种类型。通过 dialogType 属性 show，operation，confirm，process 进行配置，默认 operation 类型。'
+          subtitle=''
+          title='对话框类型'
         >
           <TypeDemo></TypeDemo>
         </DemoBox>
 
         <DemoBox
-          title='嵌套弹框'
-          subtitle=''
-          desc='通过 multi-instance 配置是否嵌套弹框同时存在，默认为 true，多个弹框叠加，设置为 false 只保留最后一个。'
           componentName='dialog'
           demoName='nested-demo'
+          desc='通过 multi-instance 配置是否嵌套弹框同时存在，默认为 true，多个弹框叠加，设置为 false 只保留最后一个。'
+          subtitle=''
+          title='嵌套弹框'
         >
           <NestedDemo></NestedDemo>
         </DemoBox>
 
         <PropsBox
-          title='Dialog 属性'
-          subtitle=''
           propsData={dialogPropsJson}
+          subtitle=''
+          title='Dialog 属性'
         />
 
         <PropsBox
-          title='Dialog 插槽'
-          subtitle=''
           propsData={dialogSlotsJson}
+          subtitle=''
+          title='Dialog 插槽'
         />
 
         <PropsBox
-          title='Dialog 事件'
-          subtitle=''
           propsData={dialogChangeJson}
+          subtitle=''
+          title='Dialog 事件'
         />
       </div>
     );

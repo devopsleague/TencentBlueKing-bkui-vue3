@@ -26,13 +26,13 @@
 
 // nav group setting
 export enum NavGroupMeta {
-  Start = '开始',
   Base = '基础',
-  Layout = '布局',
-  Nav = '导航',
-  Form = '表单',
+  Business = '业务组件',
   Data = '数据',
   Feedback = '反馈',
-  Business = '业务组件',
+  Form = '表单',
+  Layout = '布局',
+  Nav = '导航',
+  Start = '开始',
   // Others = '其他'
 }

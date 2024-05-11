@@ -1,6 +1,6 @@
 <template>
-  <div style=" width: 100%;height: 400px; overflow: auto;">
-    <div style="padding: 15px 0;">
+  <div style="width: 100%; height: 400px; overflow: auto">
+    <div style="padding: 15px 0">
       <bk-button
         theme="primary"
         @click="handleRandomRows"
@@ -10,15 +10,15 @@
       <span style="padding: 0 30px">当前行数：{{ randomRows.length }}</span>
     </div>
     <bk-virtual-render
-      :list="randomRows"
-      :line-height="getLineHeight"
       :height="300"
+      :line-height="getLineHeight"
+      :list="randomRows"
     >
-      <template #default="{data}">
+      <template #default="{ data }">
         <div
           v-for="item in data"
-          :key="item.$index"
           :style="getRowStyle(item)"
+          :key="item.$index"
         >
           <span :style="getCellStyle(item)">{{ item.$index + 1 }}</span>
           <span :style="getCellStyle(item)">{{ item.ip }}</span>
@@ -79,7 +79,7 @@
       };
     },
     created() {
-    // this.handleRandomRows();
+      // this.handleRandomRows();
     },
     methods: {
       getLineHeight(index) {
@@ -108,13 +108,12 @@
         this.randomRows.splice(
           0,
           this.randomRows.length,
-          ...new Array(Math.ceil(Math.random() * 900) + 100).fill('')
-            .map((_, index) => ({
-              ip: `${index}--192.168.0.x`,
-              source: `${index}_QQ`,
-              status: '创建中',
-              create_time: `2018-05-25 15:02:24.${index}`,
-            })),
+          ...new Array(Math.ceil(Math.random() * 900) + 100).fill('').map((_, index) => ({
+            ip: `${index}--192.168.0.x`,
+            source: `${index}_QQ`,
+            status: '创建中',
+            create_time: `2018-05-25 15:02:24.${index}`,
+          })),
         );
       },
     },

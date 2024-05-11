@@ -4,30 +4,28 @@
       <span>默认连线: <code>level-line="true"</code></span>
       <bk-tree
         :data="treeData"
-        level-line
-        label="name"
         children="children"
+        label="name"
+        level-line
       />
     </div>
     <div class="cell">
       <span>默认展开：<code>data.isOpen = true</code></span>
       <bk-tree
-        :data="autoOpen"
-        label="name"
-        children="children"
         :auto-open-parent-node="false"
+        :data="autoOpen"
+        children="children"
+        label="name"
       />
     </div>
     <div class="cell">
-      <bk-button @click="handleAutoSelect">
-        设置选中节点
-      </bk-button>
+      <bk-button @click="handleAutoSelect"> 设置选中节点 </bk-button>
       <bk-tree
         ref="refAutoSelect"
         :data="autoCheck"
-        label="name"
-        children="children"
         :selected="selected"
+        children="children"
+        label="name"
       />
     </div>
   </div>
@@ -58,18 +56,18 @@
   });
 </script>
 <style scoped>
-.row {
-  display: flex;
-  width: 100%;
-  height: 300px;
-  overflow: auto;
-}
+  .row {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+  }
 
-.cell {
-  width: 33%;
-  padding: 0 15px;
-  overflow: auto;
-  border-right: solid 1px #ddd;
-  flex: 1;
-}
+  .cell {
+    width: 33%;
+    padding: 0 15px;
+    overflow: auto;
+    border-right: solid 1px #ddd;
+    flex: 1;
+  }
 </style>

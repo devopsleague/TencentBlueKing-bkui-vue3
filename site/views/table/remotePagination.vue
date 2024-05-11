@@ -3,13 +3,13 @@
     <bk-table
       :columns="columns"
       :data="remoteData"
-      :pagination="pagination"
       :height="300"
+      :pagination="pagination"
       border="horizontal"
       remote-pagination
-      @page-value-change="handlePageValueChange"
-      @page-limit-change="handlePageLimitChange"
       @column-sort="handleColumnSort"
+      @page-limit-change="handlePageLimitChange"
+      @page-value-change="handlePageValueChange"
     >
       <!-- <template #prepend>
         <div>
@@ -24,13 +24,12 @@
   import { defineComponent } from 'vue';
 
   import { DATA_FIX_COLUMNS } from './options';
-  const DATA_ROWS = new Array(Math.ceil(Math.random() * 100) + 100).fill('')
-    .map((_, index) => ({
-      ip: `${index}--192.168.0.x`,
-      source: `${index}_QQ`,
-      status: '创建中',
-      create_time: `2018-05-25 15:02:24.${index}`,
-    }));
+  const DATA_ROWS = new Array(Math.ceil(Math.random() * 100) + 100).fill('').map((_, index) => ({
+    ip: `${index}--192.168.0.x`,
+    source: `${index}_QQ`,
+    status: '创建中',
+    create_time: `2018-05-25 15:02:24.${index}`,
+  }));
 
   export default defineComponent({
     components: {},

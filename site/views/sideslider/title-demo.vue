@@ -1,24 +1,20 @@
 <template>
   <div>
-    <bk-button @click="handleOpenSlider">
-      自定义标题和内容
-    </bk-button>
+    <bk-button @click="handleOpenSlider"> 自定义标题和内容 </bk-button>
     <bk-sideslider
       v-model:isShow="isShow"
       title="我是自定义标题"
       quick-close
     >
       <template #default>
-        <div style="height: 1200px;">
-          我是自定义内容
-        </div>
+        <div style="height: 1200px">我是自定义内容</div>
       </template>
     </bk-sideslider>
   </div>
 </template>
 
 <script lang="ts">
-  import  { defineComponent, ref } from 'vue';
+  import { defineComponent, ref } from 'vue';
   export default defineComponent({
     name: 'SiteSideslider',
     setup() {

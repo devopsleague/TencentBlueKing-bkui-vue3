@@ -7,7 +7,7 @@
       点击删除(成功)
     </bk-button>
     <bk-button
-      style="margin-left: 15px;"
+      style="margin-left: 15px"
       theme="primary"
       @click="handleDefault2"
     >
@@ -36,7 +36,7 @@
     });
     confirmA.show();
   };
-  const  handleDefault2 = () => {
+  const handleDefault2 = () => {
     confirmA.update({
       title: '确认要删除2？',
       subTitle: '22222',

@@ -1,15 +1,15 @@
 <template>
-  <div style=" width: 100%;height: 300px; overflow: auto;">
+  <div style="width: 100%; height: 300px; overflow: auto">
     <bk-tree
-      :data="treeData"
-      label="name"
-      children="children"
-      show-checkbox
-      level-line
       :auto-open-parent-node="false"
+      :data="treeData"
+      children="children"
+      label="name"
+      level-line
+      show-checkbox
       @node-click="handleNodeClick"
-      @node-expand="handleNodeExpand"
       @node-collapse="handleNodeCollapse"
+      @node-expand="handleNodeExpand"
     />
   </div>
 </template>
@@ -22,7 +22,7 @@
     components: {},
     data() {
       return {
-        treeData: [...(JSON.parse(JSON.stringify(BASIC_DATA)))],
+        treeData: [...JSON.parse(JSON.stringify(BASIC_DATA))],
       };
     },
     methods: {

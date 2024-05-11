@@ -7,15 +7,15 @@
       默认配置的提示框1
     </bk-button>
     <bk-button
+      style="margin-left: 15px"
       theme="primary"
-      style="margin-left: 15px;"
       @click="handleDefault2"
     >
       默认配置的提示框2
     </bk-button>
     <bk-button
+      style="margin-left: 15px"
       theme="primary"
-      style="margin-left: 15px;"
       @click="handleInstanceMethod"
     >
       调用实例方法
@@ -24,7 +24,6 @@
 </template>
 
 <script setup>
-
   import InfoBox from '@bkui-vue/info-box';
   let instance;
   const handleDefault1 = () => {

@@ -11,9 +11,7 @@
     v-model="value"
     label="Email"
   />
-  <div style="margin-top: 10px;">
-    选中：{{ value }}
-  </div>
+  <div style="margin-top: 10px">选中：{{ value }}</div>
 </template>
 <script setup>
   import { ref } from 'vue';

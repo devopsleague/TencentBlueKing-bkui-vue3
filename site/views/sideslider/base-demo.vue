@@ -1,25 +1,21 @@
 <template>
   <div>
-    <bk-button @click="handleOpenSlider">
-      默认配置
-    </bk-button>
+    <bk-button @click="handleOpenSlider"> 默认配置 </bk-button>
 
     <bk-sideslider
       v-model:isShow="isShow"
+      :before-close="beforeClose"
       title="我是标题"
       quick-close
-      :before-close="beforeClose"
       transfer
     >
-      <bk-button @click="handleClose">
-        关闭侧栏
-      </bk-button>
+      <bk-button @click="handleClose"> 关闭侧栏 </bk-button>
     </bk-sideslider>
   </div>
 </template>
 
 <script>
-  import  { defineComponent, ref  } from 'vue';
+  import { defineComponent, ref } from 'vue';
 
   import { InfoBox } from '../../../packages/bkui-vue';
   export default defineComponent({

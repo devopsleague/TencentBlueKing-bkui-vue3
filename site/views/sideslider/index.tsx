@@ -30,7 +30,6 @@ import DemoBox from '../../components/demo-box';
 import DemoTitle from '../../components/demo-title';
 import PropsBox from '../../components/props-box';
 import { IPropsTableItem } from '../../typings';
-
 import BaseDemo from './base-demo.vue';
 import FooterDemo from './footer-demo.vue';
 import TitleDemo from './title-demo.vue';
@@ -161,51 +160,51 @@ export default defineComponent({
     return (
       <div>
         <DemoTitle
-          name='Sideslider侧栏'
           desc='Sideslider组件， 提供一个从两侧滑入的组件，供用户填写/查看更多信息。'
           link='https://www.google.com.hk/'
+          name='Sideslider侧栏'
         />
         <DemoBox
-          title='基础用法'
-          subtitle=''
-          desc='使用默认配置的组件'
           componentName='sideslider'
           demoName='base-demo'
+          desc='使用默认配置的组件'
+          subtitle=''
+          title='基础用法'
         >
           <BaseDemo></BaseDemo>
         </DemoBox>
         <DemoBox
-          title='自定义标题和内容'
-          subtitle=''
-          desc='配置title参数和添加slot'
           componentName='sideslider'
           demoName='title-demo'
+          desc='配置title参数和添加slot'
+          subtitle=''
+          title='自定义标题和内容'
         >
           <TitleDemo></TitleDemo>
         </DemoBox>
         <DemoBox
-          title='自定义footer'
-          subtitle=''
-          desc='配置footer插槽，footer插槽内容会随着高度的变化而变化'
           componentName='sideslider'
           demoName='footer-demo'
+          desc='配置footer插槽，footer插槽内容会随着高度的变化而变化'
+          subtitle=''
+          title='自定义footer'
         >
           <FooterDemo></FooterDemo>
         </DemoBox>
         <PropsBox
-          title='Sideslider 属性'
-          subtitle=''
           propsData={SideSliserPropsJson}
+          subtitle=''
+          title='Sideslider 属性'
         />
         <PropsBox
-          title='Sideslider 事件'
-          subtitle=''
           propsData={SideSliserEventJson}
+          subtitle=''
+          title='Sideslider 事件'
         />
         <PropsBox
-          title='Sideslider 插槽'
-          subtitle=''
           propsData={SideSliserSlotJson}
+          subtitle=''
+          title='Sideslider 插槽'
         />
       </div>
     );

@@ -1,12 +1,12 @@
 <template>
-  <div style="width: 100%; overflow: auto;">
+  <div style="width: 100%; overflow: auto">
     <div class="row">
       <div class="cell">
         <span>draggable: <code>draggable = true</code></span>
         <bk-tree
           :data="treeData"
-          label="name"
           children="children"
+          label="name"
           draggable
         />
       </div>
@@ -14,10 +14,10 @@
         <span>draggable<code>drag-sort = true</code></span>
         <bk-tree
           :data="treeData"
-          label="name"
-          draggable
-          drag-sort
           children="children"
+          label="name"
+          drag-sort
+          draggable
         />
       </div>
     </div>
@@ -38,19 +38,18 @@
   });
 </script>
 <style scoped>
-.row {
-  display: flex;
-  width: 100%;
-  height: 300px;
-  padding-top: 15px;
-  overflow: auto;
+  .row {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    padding-top: 15px;
+    overflow: auto;
+  }
 
-}
-
-.cell {
-  padding: 0 15px;
-  overflow: auto;
-  border-right: solid 1px #ddd;
-  flex: 1;
-}
+  .cell {
+    padding: 0 15px;
+    overflow: auto;
+    border-right: solid 1px #ddd;
+    flex: 1;
+  }
 </style>

@@ -29,12 +29,12 @@ import { defineComponent } from 'vue';
 import DemoBox from '../../components/demo-box';
 import DemoTitle from '../../components/demo-title';
 import PropsBox from '../../components/props-box';
-import type { IPropsTableItem } from '../../typings';
-
 import BaseDemo from './base-demo.vue';
 import ConfirmDemo from './confirm-demo.vue';
 import StatusDemo from './status-demo.vue';
 import UpdateDemo from './update-demo.vue';
+
+import type { IPropsTableItem } from '../../typings';
 
 const props: IPropsTableItem[] = [
   {
@@ -220,53 +220,53 @@ export default defineComponent({
     return (
       <div>
         <DemoTitle
-          name='infoBox 消息提示'
           desc='用户操作后的消息提示，用于成功、失败、警告等消息提醒。'
           link='https://www.google.com.hk/'
+          name='infoBox 消息提示'
         />
         <DemoBox
-          title='基础用法'
-          subtitle=''
-          desc='调用 InfoBox 方法，配置 title, subTitle 等参数'
           componentName='info-box'
           demoName='base-demo'
+          desc='调用 InfoBox 方法，配置 title, subTitle 等参数'
+          subtitle=''
+          title='基础用法'
         >
           <BaseDemo />
         </DemoBox>
         <DemoBox
-          title='各种状态'
-          subtitle=''
-          desc='配置 infoType 的值，实现成功，错误，警告，加载中的不同类型'
           componentName='info-box'
           demoName='status-demo'
+          desc='配置 infoType 的值，实现成功，错误，警告，加载中的不同类型'
+          subtitle=''
+          title='各种状态'
         >
           <StatusDemo />
         </DemoBox>
         <DemoBox
-          title='Confirm'
-          subtitle='confirm 确定按钮'
-          desc='对话框分为4种类型。通过 dialogType 属性 设置为 confirm 实现'
           componentName='info-box'
           demoName='confirm-demo'
+          desc='对话框分为4种类型。通过 dialogType 属性 设置为 confirm 实现'
+          subtitle='confirm 确定按钮'
+          title='Confirm'
         >
           <ConfirmDemo />
         </DemoBox>
         <DemoBox
-          title='Update 动态更新'
-          subtitle='Update 动态更新'
-          desc='对话框分为4种类型。通过 dialogType 属性 设置为 confirm 实现'
           componentName='info-box'
           demoName='confirm-demo'
+          desc='对话框分为4种类型。通过 dialogType 属性 设置为 confirm 实现'
+          subtitle='Update 动态更新'
+          title='Update 动态更新'
         >
           <UpdateDemo />
         </DemoBox>
         <PropsBox
-          subtitle='InfoBox函数参数（以Dialog为准）'
           propsData={props}
+          subtitle='InfoBox函数参数（以Dialog为准）'
         />
         <PropsBox
-          subtitle='InfoBox函数返回实例'
           propsData={infoBox}
+          subtitle='InfoBox函数返回实例'
         />
       </div>
     );

@@ -2,44 +2,42 @@
   <div>
     <bk-button
       :theme="'primary'"
-      @click="() => exampleSetting.dialog.isShow = true"
+      @click="() => (exampleSetting.dialog.isShow = true)"
     >
       primary-1
     </bk-button>
     <bk-dialog
       :is-show="exampleSetting.dialog.isShow"
-      :title="'描述'"
-      :theme="'primary'"
       :show-mask="false"
+      :theme="'primary'"
+      :title="'描述'"
       quick-close
-      @closed="() => exampleSetting.dialog.isShow = false"
-      @confirm="() => exampleSetting.dialog.isShow = false"
+      @closed="() => (exampleSetting.dialog.isShow = false)"
+      @confirm="() => (exampleSetting.dialog.isShow = false)"
     >
       <div>primary 主题，点击遮罩不会关闭弹框，esc 按键会关闭弹框</div>
       <bk-button
-        style="margin-top: 8px;"
-        @click="() => exampleSetting.dialog.isShow2 = true"
+        style="margin-top: 8px"
+        @click="() => (exampleSetting.dialog.isShow2 = true)"
       >
         Show-2
       </bk-button>
       <bk-dialog
         :is-show="exampleSetting.dialog.isShow2"
-        :title="'描述-嵌套2'"
         :theme="'primary'"
+        :title="'描述-嵌套2'"
         quick-close
-        @closed="() => exampleSetting.dialog.isShow2 = false"
-        @confirm="() => exampleSetting.dialog.isShow2 = false"
+        @closed="() => (exampleSetting.dialog.isShow2 = false)"
+        @confirm="() => (exampleSetting.dialog.isShow2 = false)"
       >
-        <bk-button @click="() => exampleSetting.dialog.isShow3 = true">
-          Show-3
-        </bk-button>
+        <bk-button @click="() => (exampleSetting.dialog.isShow3 = true)"> Show-3 </bk-button>
         <bk-dialog
           :is-show="exampleSetting.dialog.isShow3"
-          :title="'描述-嵌套3'"
           :theme="'primary'"
+          :title="'描述-嵌套3'"
           quick-close
-          @closed="() => exampleSetting.dialog.isShow3 = false"
-          @confirm="() => exampleSetting.dialog.isShow3 = false"
+          @closed="() => (exampleSetting.dialog.isShow3 = false)"
+          @confirm="() => (exampleSetting.dialog.isShow3 = false)"
         />
       </bk-dialog>
     </bk-dialog>
